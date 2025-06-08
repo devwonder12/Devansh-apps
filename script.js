@@ -361,6 +361,60 @@ document.addEventListener("DOMContentLoaded", () => {
   const masterPlay = document.getElementById("masterPlay");
   const audioElement = new Audio();
   const songs = [...]; // your song array
+  const songs = [
+  {
+    songName: "Jhol",
+    filePath: "songs/1.mp3",
+    coverPath: "cover/1.jpg"
+  },
+  {
+    songName: "Finding Her",
+    filePath: "songs/2.mp3",
+    coverPath: "cover/2.webp"
+  },
+  {
+    songName: "Hanuman Chalisa",
+    filePath: "songs/3.mp3",
+    coverPath: "cover/3.webp"
+  },
+  {
+    songName: "Raftaarein",
+    filePath: "songs/4.mp3",
+    coverPath: "cover/4.webp"
+  },
+  {
+ songName: "Radha Gori Gori",
+    filePath: "songs/5.mp3",
+    coverPath: "cover/5.jpg"
+},
+{
+ songName: "Radha Gori Gori",
+    filePath: "songs/6.mp3",
+    coverPath: "cover/6.jpg"
+},
+{
+ songName: "Radha Gori Gori",
+    filePath: "songs/7.mp3",
+    coverPath: "cover/7.jpg"
+},
+{
+ songName: "Radha Gori Gori",
+    filePath: "songs/8.mp3",
+    coverPath: "cover/8.jpg"
+},
+{
+ songName: "Radha Gori Gori",
+    filePath: "songs/9.mp3",
+    coverPath: "cover/9.jpg"
+},
+{
+ songName: "Radha Gori Gori",
+    filePath: "songs/10.mp3",
+    coverPath: "cover/10.jpg"
+},
+];
+
+ 
   let songIndex = 0;
 
   function updateMiniPlayer(song) {
