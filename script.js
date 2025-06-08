@@ -360,7 +360,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const miniPlayPause = document.getElementById("miniPlayPause");
   const masterPlay = document.getElementById("masterPlay");
   const audioElement = new Audio();
-  const songs = [...]; // your song array
+ 
+  let songIndex = 0;
+
+  function updateMiniPlayer(song) {
+    if (!miniSongName || !miniPlayPause) return; // safety
+    miniSongName.innerText = song.songName;
+    miniPlayPause.classList.remove("fa-play");
+    miniPlayPause.classList.add("fa-pause");
+  }
+
+  masterPlay.addEventListener("click", () => {
+    if (audioElement.paused) {
+      updateMiniPlayer(songs[songIndex]);
+    } else {
+      if (miniPlayPause) {
+        miniPlayPause.classList.remove("fa-pause");
+        miniPlayPause.classList.add("fa-play");
+      }
+    }
+  });
+
   const songs = [
   {
     songName: "Jhol",
@@ -413,27 +433,6 @@ document.addEventListener("DOMContentLoaded", () => {
     coverPath: "cover/10.jpg"
 },
 ];
-
- 
-  let songIndex = 0;
-
-  function updateMiniPlayer(song) {
-    if (!miniSongName || !miniPlayPause) return; // safety
-    miniSongName.innerText = song.songName;
-    miniPlayPause.classList.remove("fa-play");
-    miniPlayPause.classList.add("fa-pause");
-  }
-
-  masterPlay.addEventListener("click", () => {
-    if (audioElement.paused) {
-      updateMiniPlayer(songs[songIndex]);
-    } else {
-      if (miniPlayPause) {
-        miniPlayPause.classList.remove("fa-pause");
-        miniPlayPause.classList.add("fa-play");
-      }
-    }
-  });
 
  // rest of code...
 });
