@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@482&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@482&family=Sue+Ellen+Francisco&display=swap');
+body{
+    background-color: antiquewhite;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: Edu SA Hand, cursive;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 44px;
+    padding: 0 7px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    min-height: 72vh;
+    height: fit-content;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+    font-family: San Francisco;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url(BG.png.webp);
+}
+
+.bottom{
+    position: relative;
+    height: 100px;background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons{
+    margin: 14px;
+    align-items: center;
+    display: flex;
+    margin: 14px;
+    align-items: center;
+    gap: 30px;
+    color: rgb(255, 243, 243); 
+    
+}
+
+
+.icons i{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+#myProgressBar{
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.songItemcontainer{
+    margin-top: 74px;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songinfo{
+    position: absolute;
+    left: 10vw;
+    font-family: San Francisco;
+}
+
+.songinfo img{
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+.time-display {
+  color: #fff;
+  font-family: sans-serif;
+  margin-bottom: 8px;
+}
+.time-display span {
+  min-width: 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 12px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section {
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 12px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+nav ul li.active {
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#contactForm input, #contactForm textarea, #contactForm button {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+body.dark {
+  background-color: #111;
+  color: white;
+}
+body.dark nav ul {
+  background-color: #222;
+}
+body.dark .container,
+body.dark section {
+  background-color: #333;
+  color: white;
+}
+body.dark .songItem {
+  background-color: #555;
+  color: white;
+}
+
+/* Common section style */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  display: none;
+}
+
+/* Show class with animation */
+section.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#myProgressBar {
+  width: 80vw;
+  height: 6px;
+  appearance: none;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease-in-out;
+}
+
+/* Track fill - for modern browsers */
+#myProgressBar::-webkit-slider-thumb {
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #ff3b30; /* Apple Music red tone */
+  cursor: pointer;
+  margin-top: -5px;
+  transition: all 0.2s ease;
+}
+
+#myProgressBar::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #ff3b30;
+  cursor: pointer;
+}
+
+#myProgressBar::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #ff3b30 var(--progress, 0%), #d3d3d3 var(--progress, 0%));
+}
+
+#myProgressBar::-moz-range-track {
+  height: 6px;
+  background: #d3d3d3;
+  border-radius: 5px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
+  background-color: #121212;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  background: transparent;
+}
+
+.songItem {
+  background-color: #1c1c1e;
+  border-radius: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.songItem img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 15px;
+}
+
+.songName {
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.songItem:hover {
+  background-color: #2c2c2e;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(28, 28, 30, 0.75);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  border-top: 1px solid #333;
+}
+
+.icons i {
+  color: #ff3b30;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icons i:hover {
+  transform: scale(1.2);
+}
+
+body.light {
+  background-color: #f5f5f7;
+  color: black;
+}
+
+body.light .songItem {
+  background-color: #ffffff;
+  color: black;
+}
+
+body.light .bottom {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+body.light .icons i {
+  color: #ff3b30;
+}
+
+@media (max-width: 768px) {
+  .songItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bottom {
+    height: 120px;
+    padding: 10px;
+  }
+
+  #myProgressBar {
+    width: 90%;
+  }
+}
+
+.miniPlayer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(28, 28, 30, 0.95);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.miniControls i {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #ff3b30;
+  cursor: pointer;
+}
+
+.albumCarousel {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 15px;
+  scroll-snap-type: x mandatory;
+}
+
+.albumCover {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.albumCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nowPlayingView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+  gap: 20px;
+}
+
+.nowPlayingView img {
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.nowPlayingBar {
+  width: 80%;
+}
+
+.nowPlayingControls i {
+  font-size: 28px;
+  margin: 0 20px;
+  color: #ff3b30;
+}
+
+@media (max-width: 768px) {
+  .miniPlayer, .bottom, .nowPlayingView {
+    font-size: 14px;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .albumCover {
+    width: 100px;
+    height: 100px;
+  }
+
+  .nowPlayingView img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .nowPlayingBar {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
