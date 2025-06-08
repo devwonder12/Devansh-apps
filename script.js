@@ -352,9 +352,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  
+
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const miniSongName = document.getElementById("miniSongName");
+  const miniPlayPause = document.getElementById("miniPlayPause");
+  const masterPlay = document.getElementById("masterPlay");
+  const audioElement = new Audio();
+  const songs = [...]; // your song array
+  let songIndex = 0;
 
+  function updateMiniPlayer(song) {
+    if (!miniSongName || !miniPlayPause) return; // safety
+    miniSongName.innerText = song.songName;
+    miniPlayPause.classList.remove("fa-play");
+    miniPlayPause.classList.add("fa-pause");
+  }
 
+  masterPlay.addEventListener("click", () => {
+    if (audioElement.paused) {
+      updateMiniPlayer(songs[songIndex]);
+    } else {
+      if (miniPlayPause) {
+        miniPlayPause.classList.remove("fa-pause");
+        miniPlayPause.classList.add("fa-play");
+      }
+    }
+  });
 
+ // rest of code...
+});
+
+if (miniPlayPause) {
+  miniPlayPause.classList.remove("fa-pause");
+}
